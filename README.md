@@ -6,7 +6,15 @@ Este repositório contém o código-fonte refatorado da classe `User.java` e a d
 
 ## 1. Teste de Caixa Branca Estático (Revisão de Código)
 
-A planilha de revisão estática (**PLANO DE TESTE.xlsx - CAIXA BRANCA (ESTÁTICO).csv**) com os problemas de documentação, nomenclatura e fechamento de recursos está anexada a este repositório.
+A planilha de revisão estática (**PLANO DE TESTE.xlsx**) com os problemas de documentação, nomenclatura e fechamento de recursos está anexada a este repositório.
+
+| ID    | Item                                            | Status | Artefato com Erro                                           | Correções a Serem Realizadas                                                                                                                                     |
+| ----- | ----------------------------------------------- | ------ | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1** | O código foi devidamente documentado?           | ❌ NÃO  | Classe `User`, métodos `conectarBD()`, `verificarUsuario()` | Adicionar comentários Javadoc para a classe, métodos, parâmetros e retorno.                                                                                      |
+| **2** | As variáveis e constantes possuem nomenclatura? | ✅ SIM  | —                                                           | —                                                                                                                                                                |
+| **3** | Existem legibilidade e organização no código?   | ✅ SIM  | —                                                           | —                                                                                                                                                                |
+| **4** | Todos os NullPointers foram tratados?           | ❌ NÃO  | Método `verificarUsuario()`                                 | O método `conectarBD()` pode retornar `null`. Essa falta de checagem resulta em `NullPointerException` quando `createStatement()` é chamado em uma conexão nula. |
+| **5** | As conexões utilizadas foram fechadas?          | ❌ NÃO  | Métodos `conectarBD()`, `verificarUsuario()`                | Recursos como `Connection`, `Statement` e `ResultSet` não são fechados.                                                                                          |
 
 ---
 
