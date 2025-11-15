@@ -1,28 +1,30 @@
-Análise de Teste de Caixa Branca - Classe User
+# Análise de Teste de Caixa Branca - Classe User
 
 Este repositório contém o código-fonte refatorado da classe `User.java` e a documentação completa do Teste de Caixa Branca (Estático e Dinâmico), conforme exigido na atividade.
 
 ---
 
-1. Teste de Caixa Branca Estático (Revisão de Código)
+## 1. Teste de Caixa Branca Estático (Revisão de Código)
 
-A planilha de revisão estática (PLANO DE TESTE.xlsx) com os problemas de documentação, nomenclatura e fechamento de recursos está anexada a este repositório.
+A planilha de revisão estática (**PLANO DE TESTE.xlsx - CAIXA BRANCA (ESTÁTICO).csv**) com os problemas de documentação, nomenclatura e fechamento de recursos está anexada a este repositório.
 
 ---
 
-2. Análise Dinâmica de Fluxo de Controle
+## 2. Análise Dinâmica de Fluxo de Controle
 
 A análise a seguir foca no método `verificarUsuario(String login, String senha)` e serve para determinar o esforço mínimo de teste.
 
-2.1. Notação de Grafo de Fluxo (Flow Graph Notation)
+### 2.1. Notação de Grafo de Fluxo (Flow Graph Notation)
 
 O Grafo de Fluxo representa o controle lógico do método, identificando as ações (Nós) e as transições (Arestas/Fluxos).
 
 #### Diagrama de Atividades (Gerado por PlantUML):
-![Grafo de Fluxo do método verificarUsuario](GrafoDeFluxoDiagrama.png)
-#### Diagrama de Grafo Simplificado:
-![Grafo de Fluxo Simplificado do método verificarUsuario](GrafoDeFluxoSimplificado.png)
 
+![Grafo de Fluxo do método verificarUsuario](GrafoDeFluxoDiagrama.png)
+
+#### Diagrama de Grafo Simplificado:
+
+![Grafo de Fluxo Simplificado do método verificarUsuario](GrafoDeFluxoSimplificado.png)
 
 **Identificação de Elementos:**
 
@@ -32,7 +34,7 @@ O Grafo de Fluxo representa o controle lógico do método, identificando as aç�
 
 ---
 
-2.2. Cálculo da Complexidade Ciclomática (M)
+### 2.2. Cálculo da Complexidade Ciclomática (M)
 
 **Fórmula Utilizada:**
 $$M = E - N + 2P$$
@@ -46,7 +48,7 @@ $$\mathbf{M = 3}$$
 
 ---
 
-2.3. Caminhos Básicos (Casos de Teste Mínimos)
+### 2.3. Caminhos Básicos (Casos de Teste Mínimos)
 
 Com base na Complexidade M=3, foi identificado os três caminhos independentes que devem ser testados:
 
