@@ -1,5 +1,7 @@
 # Análise de Teste de Caixa Branca - Classe User
 
+Repositório para Atividade Individual - Tema: Caixa Branca (Parte 1) - Gabriel dos Santos Campelo (247724)
+
 Este repositório contém o código-fonte refatorado da classe `User.java` e a documentação completa do Teste de Caixa Branca (Estático e Dinâmico), conforme exigido na atividade.
 
 ---
