@@ -18,7 +18,7 @@ A análise a seguir foca no método `verificarUsuario(String login, String senha
 
 O Grafo de Fluxo representa o controle lógico do método, identificando as ações (Nós) e as transições (Arestas/Fluxos).
 
-**Diagrama de Atividades (Gerado por PlantUML):**
+GrafoDeFluxoSimplificado.png
 
 **Identificação de Elementos:**
 
