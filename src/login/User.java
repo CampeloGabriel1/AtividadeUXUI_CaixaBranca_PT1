@@ -12,11 +12,11 @@ public class User {
     public String nome = "";
     public boolean result = false;
 
-    // 1. Método conectarBD() corrigido minimamente para retornar conexão ou null
+    // 1. Método conectarBD() para retornar conexão ou null
     public Connection conectarBD(){
         Connection conn = null;
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver"); // Corrigida a string do driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://127.0.0.1/test?user=lopes&password=123";
             conn = DriverManager.getConnection(url);
         } catch (Exception e) { 
@@ -36,12 +36,11 @@ public class User {
         Statement st = null;
         ResultSet rs = null;
 
-        // [CORRIGIDO: Tratamento de NullPointer - sai se a conexão falhar]
+        //Tratamento de NullPointer - sai se a conexão falhar]
         if (conn == null) {
             return false;
         }
 
-        // Concatenação SQL insegura (mantida conforme o original para evitar segurança)
         String sql = "select nome from usuarios ";
         sql += "where login = '" + login + "'";
         sql += " and senha = '" + senha + "';";
@@ -53,14 +52,13 @@ public class User {
             
             if (rs.next()) {
                 this.result = true;
-                // [CORRIGIDO: Leitura de nome SOMENTE após rs.next() para evitar exceção]
+                //Leitura de nome somente após rs.next() para evitar exceção]
                 this.nome = rs.getString("nome"); 
             }
         } catch (Exception e) {
-            // Tratamento de exceção simples, como no original
+            // Tratamento de exceção simples
             System.err.println("Erro na verificação: " + e.getMessage());
         } finally {
-            // [CORRIGIDO: Implementação do fechamento de recursos]
             try {
                 if (rs != null) rs.close();
                 if (st != null) st.close();
