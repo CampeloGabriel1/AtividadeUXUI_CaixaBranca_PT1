@@ -6,7 +6,7 @@ Este repositório contém o código-fonte refatorado da classe `User.java` e a d
 
 1. Teste de Caixa Branca Estático (Revisão de Código)
 
-A planilha de revisão estática (`Planilha_Teste_Estatico.xlsx` ou similar) com os problemas de documentação, nomenclatura e fechamento de recursos está anexada a este repositório.
+A planilha de revisão estática (PLANO DE TESTE.xlsx) com os problemas de documentação, nomenclatura e fechamento de recursos está anexada a este repositório.
 
 ---
 
@@ -18,8 +18,11 @@ A análise a seguir foca no método `verificarUsuario(String login, String senha
 
 O Grafo de Fluxo representa o controle lógico do método, identificando as ações (Nós) e as transições (Arestas/Fluxos).
 
+#### Diagrama de Atividades (Gerado por PlantUML):
+![Grafo de Fluxo do método verificarUsuario](GrafoDeFluxoDiagrama.png)
 #### Diagrama de Grafo Simplificado:
 ![Grafo de Fluxo Simplificado do método verificarUsuario](GrafoDeFluxoSimplificado.png)
+
 
 **Identificação de Elementos:**
 
