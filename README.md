@@ -18,7 +18,8 @@ A análise a seguir foca no método `verificarUsuario(String login, String senha
 
 O Grafo de Fluxo representa o controle lógico do método, identificando as ações (Nós) e as transições (Arestas/Fluxos).
 
-GrafoDeFluxoSimplificado.png
+#### Diagrama de Grafo Simplificado:
+![Grafo de Fluxo Simplificado do método verificarUsuario](GrafoDeFluxoSimplificado.png)
 
 **Identificação de Elementos:**
 
